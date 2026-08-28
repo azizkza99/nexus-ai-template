@@ -1,11 +1,10 @@
-import React from 'react';
-import { t } from '../translations';
+import { t } from '../translations'
 
 export default function Testimonials({ lang }) {
-  const currentText = t[lang].testimonials;
+  const currentText = t[lang].testimonials
 
   return (
-    <section className="py-24 bg-slate-950 px-4 sm:px-6 lg:px-8 border-t border-slate-900">
+    <section className="border-t border-slate-900 bg-slate-950 px-4 py-24 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <h2 className="text-xs sm:text-sm font-semibold text-indigo-400 tracking-wider uppercase">
@@ -21,16 +20,14 @@ export default function Testimonials({ lang }) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {currentText.list.map((item, index) => (
-            <div key={index} className="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col justify-between space-y-6">
-              <p className="text-slate-300 text-sm leading-relaxed">"{item.quote}"</p>
-              <div className="border-t border-slate-800/80 pt-4">
-                <h4 className="text-white font-bold text-sm">{item.author}</h4>
-                <p className="text-slate-500 text-xs mt-0.5">{item.role}</p>
-              </div>
-            </div>
+            <article key={item.title} className="space-y-5 rounded-2xl border border-slate-800 bg-slate-900/40 p-8">
+              <span className="text-xs font-bold text-indigo-400">0{index + 1}</span>
+              <h4 className="text-lg font-bold text-white">{item.title}</h4>
+              <p className="text-sm leading-7 text-slate-400">{item.body}</p>
+            </article>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }

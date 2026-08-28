@@ -1,208 +1,402 @@
 export const t = {
   ar: {
+    meta: {
+      title: 'Nexus-AI | تصوّر واجهة SaaS ثنائي اللغة',
+      description:
+        'نموذج واجهة عربي وإنجليزي لمنصة أتمتة مدعومة بالذكاء الاصطناعي، يعمل محليًا من دون تسجيل دخول أو إرسال بيانات.',
+    },
     nav: {
-      features: 'المميزات',
-      solutions: 'الحلول',
-      pricing: 'الأسعار',
-      contact: 'اتصل بنا',
-      login: 'تسجيل الدخول',
-      langBtn: 'English'
+      features: 'الواجهة',
+      solutions: 'المعمارية',
+      pricing: 'نماذج الباقات',
+      contact: 'خطط التنفيذ',
+      dashboard: 'لوحة العرض',
+      langBtn: 'English',
+      languageLabel: 'Switch to English',
+      openMenu: 'فتح القائمة',
+      closeMenu: 'إغلاق القائمة',
     },
     hero: {
-      badge: 'الجيل القادم من أتمتة الذكاء الاصطناعي',
-      title1: 'أتمت أعمالك بذكاء',
-      title2: 'فوق مستوى الخيال',
-      desc: 'منصة Nexus-AI تمنح وكالتك القوة المطلقة لأتمتة سير العمل، تحليل البيانات، ورفع الإنتاجية بأعلى معايير الفخامة الرقمية.',
-      ctaPrimary: 'ابدأ التجربة المجانية',
-      ctaSecondary: 'استعراض النظام (Demo)'
+      badge: 'تصوّر ثنائي اللغة لمنتج SaaS مدعوم بالذكاء الاصطناعي',
+      title1: 'واجهة توضّح قيمة',
+      title2: 'الأتمتة قبل بنائها',
+      desc: 'Nexus-AI نموذج واجهة تفاعلي يختبر رحلة منتج أتمتة: من الرسالة والتسعير إلى لوحة البيانات. لا توجد حسابات أو مدفوعات أو تكاملات خلفية في هذا الإصدار.',
+      ctaPrimary: 'استكشف لوحة العرض',
+      ctaSecondary: 'راجع مكوّنات الواجهة',
+      trust: 'عرض أمامي محلي · لا يجمع بيانات · لا ينفّذ أتمتة حقيقية',
     },
     stats: [
-      { value: '+10M', label: 'مهمة تم أتمتتها بنجاح' },
-      { value: '99.9%', label: 'نسبة توفر الخوادم (Uptime)' },
-      { value: '500+', label: 'وكالة رقمية تعتمد علينا' },
-      { value: '80%', label: 'توفير في وقت التشغيل' },
+      { value: '02', label: 'العربية والإنجليزية' },
+      { value: 'RTL/LTR', label: 'اتجاه متزامن بالكامل' },
+      { value: 'LOCAL', label: 'بيانات العرض داخل المتصفح' },
+      { value: '0', label: 'حسابات أو مدفوعات حقيقية' },
     ],
     features: {
-      tag: 'المميزات الخارقة • Core Features',
-      title: 'كل ما تحتاجه لأتمتة وكالتك في مكان واحد',
-      desc: 'مصمم خصيصاً للفرق الطموحة التي تسعى للسيطرة على السوق بأعلى كفاءة.',
+      tag: 'مكوّنات الواجهة',
+      title: 'نظام عرض واضح لمنتج لم يُبنَ خلفيًا بعد',
+      desc: 'كل جزء يوضح كيف يمكن تقديم المنصة مستقبلًا، مع فصل صريح بين الواجهة العاملة والميزات التي تحتاج Backend وتكاملات حقيقية.',
       items: [
-        { title: 'محرك ذكاء اصطناعي متطور', desc: 'استفد من نماذج لغوية ضخمة ومخصصة لتحليل النصوص والبيانات بدقة متناهية.' },
-        { title: 'أتمتة سير العمل المرن', desc: 'اربط أدواتك المفضلة عبر مسارات عمل مرنة وبدون تعقيد.' },
-        { title: 'تحليلات الأداء اللحظية', desc: 'راقب إنتاجية وكالتك ونمو أرباحك عبر لوحات بيانات تفاعلية ومباشرة.' },
-        { title: 'أمان وحماية بمستوى المؤسسات', desc: 'بياناتك مشفرة بالكامل وفقاً لأعلى معايير الأمان العالمية.' },
-        { title: 'تكامل السحابة الفوري', desc: 'اربط أنظمتك بالسحابة خلال ثوانٍ معدودة وبدون خبرة برمجية.' },
-        { title: 'دعم فني استثنائي 24/7', desc: 'فريق من الخبراء جاهز لمساعدتك في أي وقت.' }
-      ]
+        {
+          title: 'تجربة عربية أولًا',
+          desc: 'محتوى عربي مصمم للاتجاه من اليمين إلى اليسار، مع نسخة إنجليزية متكاملة.',
+        },
+        {
+          title: 'لوحة بيانات نموذجية',
+          desc: 'بطاقات وأنشطة وإجراءات تستخدم بيانات موضحة كأمثلة، لا كقياسات إنتاجية.',
+        },
+        {
+          title: 'معمارية مكوّنات',
+          desc: 'أقسام React مستقلة يسهل إعادة ترتيبها وربطها بمصادر بيانات لاحقًا.',
+        },
+        {
+          title: 'مسارات قابلة للوصول',
+          desc: 'تنقل بلوحة المفاتيح، حالات تركيز واضحة، حوار دلالي، وأسئلة قابلة للطي.',
+        },
+        {
+          title: 'تسعير توضيحي',
+          desc: 'هندسة باقات لا تتحول إلى شراء قبل اعتماد المنتج والتكلفة وشروط الخدمة.',
+        },
+        {
+          title: 'حدود ثقة واضحة',
+          desc: 'لا تسجيل دخول وهمي، لا رسائل نجاح زائفة، ولا شهادات أو أرقام عملاء مصطنعة.',
+        },
+      ],
     },
     pricing: {
-      tag: 'الأسعار والباقات • Pricing Plans',
-      title: 'خطط تفصيلية تناسب حجم وكالتك',
-      desc: 'اختر الباقة المناسبة لطموحاتك واحصل على وصول فوري لكافة المميزات.',
-      btn: 'اشترك الآن',
+      tag: 'نماذج الباقات',
+      title: 'هندسة منتجات قابلة للاختبار قبل التسعير',
+      desc: 'هذه المستويات توضح اختلاف نطاق الواجهة فقط. الأسماء والأسعار والمزايا التجارية تحتاج بحثًا واعتمادًا قبل الإطلاق.',
+      badge: 'تصوّر توضيحي',
+      btn: 'أضفها إلى خطة التنفيذ',
       plans: [
-        { name: 'البداية (Starter)', price: '$49', desc: 'مثالية للمشاريع الناشئة.', features: ['حتى 5,000 مهمة شهرياً', 'دعم فني عبر البريد', 'تحديثات مجانية مستمرة'] },
-        { name: 'الاحترافية (Pro)', price: '$129', desc: 'للفرق والوكالات النامية.', features: ['مهام غير محدودة', 'دعم فني أولوية 24/7', 'تكاملات متقدمة مع CRM', 'تقارير أداء مخصصة'], popular: true },
-        { name: 'المؤسسات (Enterprise)', price: '$299', desc: 'للشركات الكبرى ذات المتطلبات الخاصة.', features: ['مدير حساب خاص', 'سيرفرات مخصصة بالكامل', 'ضمان توفر النظام 99.99%'] }
-      ]
+        {
+          name: 'Starter UI',
+          price: 'تصوّر',
+          desc: 'رحلة أساسية لفريق صغير يختبر الفكرة.',
+          features: ['صفحة تعريف ثنائية اللغة', 'لوحة عرض واحدة', 'مخطط متطلبات محلي'],
+        },
+        {
+          name: 'Workflow UI',
+          price: 'تصوّر',
+          desc: 'واجهة أعمق لفرق تحتاج مسارات وتقارير.',
+          features: ['حالات مسارات العمل', 'أنشطة ومؤشرات نموذجية', 'نظام مكوّنات موسّع'],
+          popular: true,
+        },
+        {
+          name: 'Platform UI',
+          price: 'تصوّر',
+          desc: 'نطاق مؤسسي يحتاج اكتشافًا وأمنًا وتشغيلًا مستقلًا.',
+          features: ['نمذجة الصلاحيات', 'تصميم التكاملات', 'خطة Backend ومراقبة'],
+        },
+      ],
     },
     testimonials: {
-      tag: 'آراء العملاء • Testimonials',
-      title: 'قصص نجاح من وكالات قادت السوق معنا',
-      desc: 'اكتشف كيف ساعدت Nexus-AI عملائنا في مضاعفة إنتاجيتهم.',
+      tag: 'عدسات المراجعة',
+      title: 'كيف نقيس جودة هذا التصوّر؟',
+      desc: 'بدل شهادات عملاء غير حقيقية، نعرض المعايير التي يجب اختبارها مع مستخدمين فعليين.',
       list: [
-        { quote: 'تغيرت طريقة عملنا جذرياً. وفرنا أكثر من 40 ساعة أسبوعياً.', author: 'سلطان العتيبي', role: 'المدير التنفيذي لـ وكالة أفق' },
-        { quote: 'منصة مذهلة بكل ما تعنيه الكلمة. التصميم والسرعة في مستوى آخر.', author: 'سارة الشمري', role: 'مديرة العمليات التقنية' },
-        { quote: 'أفضل استثمار قمنا به للوكالة هذا العام. أداء استثنائي وعائد سريع.', author: 'خالد العمري', role: 'مؤسس شركة الحلول الذكية' }
-      ]
+        {
+          title: 'وضوح القيمة',
+          body: 'هل يفهم الزائر خلال ثوانٍ أن هذا نموذج لمنتج أتمتة، وما الذي يحتاج بناءً حقيقيًا؟',
+        },
+        {
+          title: 'الثقة',
+          body: 'هل تظهر البيانات والباقات واللوحة كمحتوى توضيحي من دون إيهام بعملاء أو تشغيل قائم؟',
+        },
+        {
+          title: 'سهولة الاستخدام',
+          body: 'هل تعمل اللغة والاتجاه والتنقل والحوار والأسئلة بشكل واضح على الجوال ولوحة المفاتيح؟',
+        },
+      ],
     },
     faq: {
-      tag: 'الأسئلة الشائعة • FAQ',
-      title: 'كل ما تحتاج معرفته عن المنصة',
-      desc: 'إجابات واضحة على أبرز الأسئلة المتكررة.',
+      tag: 'أسئلة صريحة',
+      title: 'ما الذي يعمل، وما الذي يبقى للتنفيذ؟',
+      desc: 'إجابات تفصل بين واجهة العرض والمنتج التشغيلي.',
       list: [
-        { q: 'كيف يمكنني البدء في استخدام Nexus-AI؟', a: 'يمكنك إنشاء حساب مجاني والبدء فوراً في ربط أدواتك وأتمتة المهام.' },
-        { q: 'هل يحتاج النظام إلى خبرة برمجية؟', a: 'طلاً! المنصة مصممة بواجهة مرنة وسحب وإفلات لتمكين الجميع.' },
-        { q: 'هل يمكنني تغيير الباقة لاحقاً؟', a: 'نعم، يمكنك الترقية أو إلغاء الاشتراك في أي وقت.' }
-      ]
+        {
+          q: 'هل Nexus-AI منصة SaaS تعمل الآن؟',
+          a: 'لا. هذا نموذج Frontend تفاعلي يوضح تجربة المنتج المقترحة. لا توجد حسابات أو قاعدة بيانات أو محرك أتمتة في هذا الإصدار.',
+        },
+        {
+          q: 'هل لوحة البيانات تعرض قياسات حقيقية؟',
+          a: 'لا. جميع الأرقام والأنشطة بيانات نموذجية ثابتة وموسومة بوضوح للاختبار البصري والتفاعلي.',
+        },
+        {
+          q: 'هل يمكن الاشتراك أو الدفع؟',
+          a: 'لا. الباقات هندسة محتوى توضيحية ولا توجد عملية شراء. يتطلب الإطلاق اعتماد التسعير وربط الدفع والشروط القانونية.',
+        },
+        {
+          q: 'ما الخطوة التالية لبناء المنتج؟',
+          a: 'تحديد المستخدم المستهدف وحالات الأتمتة، ثم تصميم البيانات والصلاحيات والتكاملات واختيار Backend قبل أي وعد تجاري.',
+        },
+      ],
     },
-    contact: {
-      tag: 'تواصل معنا • Contact Us',
-      title: 'ابقى على تواصل معنا',
-      desc: 'لديك استفسار أو ترغب في بدء مشروعك؟ اترك رسالتك وسنرد عليك في أقرب وقت.',
-      namePlaceholder: 'اسمك الكريم',
-      emailPlaceholder: 'البريد الإلكتروني',
-      messagePlaceholder: 'اكتب رسالتك هنا...',
-      submitBtn: 'إرسال الرسالة'
+    planner: {
+      tag: 'مخطط التنفيذ المحلي',
+      title: 'حوّل الفكرة إلى نطاق أولي',
+      desc: 'اختر سياقك وسنولّد ملخصًا داخل المتصفح فقط. لا نطلب اسمًا أو بريدًا، ولا يُرسل أي شيء.',
+      team: 'حجم الفريق',
+      priority: 'أولوية النسخة الأولى',
+      output: 'المخرج المطلوب',
+      submit: 'ولّد ملخص النطاق',
+      reset: 'ابدأ من جديد',
+      resultTitle: 'ملخص محلي جاهز للمناقشة',
+      resultDesc:
+        'فريق {team} يركز على {priority} ويحتاج {output}. هذا الملخص بقي داخل متصفحك ولم تُرسل أي بيانات.',
+      teams: [
+        { value: 'solo', label: 'فرد أو مشروع ناشئ' },
+        { value: 'small', label: 'فريق صغير' },
+        { value: 'org', label: 'شركة أو مؤسسة' },
+      ],
+      priorities: [
+        { value: 'workflow', label: 'مسار أتمتة واحد' },
+        { value: 'analytics', label: 'لوحة مؤشرات' },
+        { value: 'integrations', label: 'تكاملات الأدوات' },
+      ],
+      outputs: [
+        { value: 'prototype', label: 'نموذج UX قابل للاختبار' },
+        { value: 'mvp', label: 'خطة MVP تقنية' },
+        { value: 'system', label: 'معمارية نظام كاملة' },
+      ],
     },
     footer: {
-      desc: 'الجيل القادم من أتمتة الأعمال عبر الذكاء الاصطناعي.',
-      rights: 'جميع الحقوق محفوظة © 2026 Nexus-AI.'
+      desc: 'تصوّر Frontend ثنائي اللغة لمنصة أتمتة مستقبلية.',
+      trust: 'لا حسابات · لا مدفوعات · لا إرسال بيانات',
+      rights: '© 2026 Nexus-AI UI Concept. MIT License.',
     },
-    auth: {
-      title: 'تسجيل الدخول إلى حسابك',
-      subtitle: 'أدخل بريدك الإلكتروني للمتابعة إلى لوحة التحكم',
-      emailLabel: 'البريد الإلكتروني',
-      passLabel: 'كلمة المرور',
-      submit: 'دخول',
-      close: 'إغلاق'
+    demo: {
+      eyebrow: 'عرض محلي آمن',
+      title: 'افتح لوحة البيانات النموذجية',
+      subtitle: 'لا تحتاج بريدًا أو كلمة مرور. هذه معاينة واجهة وليست حسابًا حقيقيًا.',
+      bullets: [
+        'جميع المقاييس والأنشطة بيانات نموذجية.',
+        'الإجراءات تغيّر حالة العرض محليًا فقط.',
+        'لن يتم إنشاء حساب أو إرسال بيانات.',
+      ],
+      open: 'افتح لوحة العرض',
+      close: 'إغلاق',
     },
     dashboard: {
-      title: 'لوحة التحكم • Dashboard',
-      subtitle: 'مرحباً بك مجدداً، إليك ملخص أداء عمليات الأتمتة لوكالتك.',
-      logout: 'تسجيل الخروج',
-      m1: 'المهام المنجزة هذا الشهر',
-      m2: 'الوقت الموفر',
-      m3: 'مسارات العمل النشطة',
-      m4: 'حالة النظام',
-      activity: 'النشاط الأخير للأتمتة',
-      quick: 'إجراءات سريعة',
-      btn1: '+ إنشاء مسار عمل جديد',
-      btn2: 'ربط أداة جديدة (Integration)',
-      btn3: 'تصدير التقارير (CSV)'
-    }
+      eyebrow: 'بيانات نموذجية · Demo Data',
+      title: 'لوحة عمليات Nexus-AI',
+      subtitle: 'تصوّر واجهة يوضح كيف يمكن متابعة مسارات أتمتة مستقبلية.',
+      back: 'العودة إلى الموقع',
+      metrics: [
+        { label: 'مهام نموذجية هذا الشهر', value: '24' },
+        { label: 'وقت محاكاة موفّر', value: '6.4h' },
+        { label: 'مسارات عرض', value: '3' },
+        { label: 'مصدر البيانات', value: 'LOCAL' },
+      ],
+      activity: 'نشاط نموذجي',
+      activities: [
+        { title: 'مراجعة طلب جديد', time: 'الخطوة 01', status: 'نموذج' },
+        { title: 'تصنيف مدخلات تجريبية', time: 'الخطوة 02', status: 'نموذج' },
+        { title: 'إنشاء ملخص افتراضي', time: 'الخطوة 03', status: 'نموذج' },
+      ],
+      quick: 'تفاعلات الواجهة',
+      actions: ['جرّب إنشاء مسار', 'جرّب ربط أداة', 'جرّب تصدير تقرير'],
+      actionResult: 'تم تحديث حالة العرض محليًا فقط. لم يُنفّذ أي إجراء خارجي.',
+    },
   },
   en: {
+    meta: {
+      title: 'Nexus-AI | Bilingual SaaS Interface Concept',
+      description:
+        'An Arabic-English interface concept for an AI-enabled automation product, running locally with no account creation or data submission.',
+    },
     nav: {
-      features: 'Features',
-      solutions: 'Solutions',
-      pricing: 'Pricing',
-      contact: 'Contact Us',
-      login: 'Sign In',
-      langBtn: 'العربية'
+      features: 'Interface',
+      solutions: 'Architecture',
+      pricing: 'Plan concepts',
+      contact: 'Scope planner',
+      dashboard: 'Dashboard demo',
+      langBtn: 'العربية',
+      languageLabel: 'التبديل إلى العربية',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu',
     },
     hero: {
-      badge: 'Next-Gen AI Automation',
-      title1: 'Automate your business',
-      title2: 'Beyond imagination',
-      desc: 'Nexus-AI platform gives your agency absolute power to automate workflows, analyze data, and boost productivity with digital luxury standards.',
-      ctaPrimary: 'Start Free Trial',
-      ctaSecondary: 'Watch Demo'
+      badge: 'Bilingual SaaS interface concept for AI-enabled automation',
+      title1: 'Explain automation value',
+      title2: 'before building it',
+      desc: 'Nexus-AI is an interactive interface concept that tests an automation product journey—from positioning and plan architecture to a dashboard. This version has no accounts, payments, integrations, or backend.',
+      ctaPrimary: 'Explore dashboard demo',
+      ctaSecondary: 'Review interface system',
+      trust: 'Local frontend demo · No data collection · No real automation',
     },
     stats: [
-      { value: '+10M', label: 'Tasks successfully automated' },
-      { value: '99.9%', label: 'Server Uptime' },
-      { value: '500+', label: 'Digital agencies trust us' },
-      { value: '80%', label: 'Uptime & time savings' },
+      { value: '02', label: 'Arabic and English' },
+      { value: 'RTL/LTR', label: 'Synchronized direction' },
+      { value: 'LOCAL', label: 'Browser-only demo data' },
+      { value: '0', label: 'Real accounts or payments' },
     ],
     features: {
-      tag: 'Core Features',
-      title: 'Everything you need to automate your agency in one place',
-      desc: 'Designed specifically for ambitious teams striving to dominate the market with maximum efficiency.',
+      tag: 'Interface system',
+      title: 'A clear product story before the backend exists',
+      desc: 'Each section demonstrates how the product could be presented while explicitly separating the working interface from features that still require real infrastructure.',
       items: [
-        { title: 'Advanced AI Engine', desc: 'Leverage massive, custom language models for precise text and data analysis.' },
-        { title: 'Flexible Workflow Automation', desc: 'Connect your favorite tools via flexible, seamless workflows.' },
-        { title: 'Real-time Performance Analytics', desc: 'Monitor agency productivity and profit growth through live, interactive dashboards.' },
-        { title: 'Enterprise-Grade Security', desc: 'Your data is fully encrypted according to global security standards.' },
-        { title: 'Instant Cloud Integration', desc: 'Connect your systems to the cloud in seconds without deep coding expertise.' },
-        { title: '24/7 Exceptional Support', desc: 'A team of experts ready to help you anytime.' }
-      ]
+        {
+          title: 'Arabic-first experience',
+          desc: 'Purpose-built right-to-left content with a complete, synchronized English version.',
+        },
+        {
+          title: 'Sample dashboard',
+          desc: 'Cards, activity, and actions use clearly labeled example data—not production metrics.',
+        },
+        {
+          title: 'Component architecture',
+          desc: 'Independent React sections that can be rearranged and connected to real data later.',
+        },
+        {
+          title: 'Accessible paths',
+          desc: 'Keyboard navigation, visible focus, a semantic dialog, and accessible FAQ controls.',
+        },
+        {
+          title: 'Illustrative plans',
+          desc: 'A plan architecture that cannot become checkout before product scope and economics are approved.',
+        },
+        {
+          title: 'Explicit trust boundary',
+          desc: 'No fake sign-in, false success message, manufactured testimonial, or invented customer metric.',
+        },
+      ],
     },
     pricing: {
-      tag: 'Pricing Plans',
-      title: 'Detailed plans that fit your agency size',
-      desc: 'Choose the right plan for your ambitions and get instant access to all features.',
-      btn: 'Subscribe Now',
+      tag: 'Plan concepts',
+      title: 'Test product architecture before pricing it',
+      desc: 'These levels demonstrate interface scope only. Names, prices, and commercial features require research and approval before launch.',
+      badge: 'Illustrative concept',
+      btn: 'Add to scope planner',
       plans: [
-        { name: 'Starter', price: '$49', desc: 'Ideal for startups and individuals.', features: ['Up to 5,000 tasks/month', 'Email support', 'Continuous free updates'] },
-        { name: 'Pro', price: '$129', desc: 'For growing teams and agencies.', features: ['Unlimited tasks', '24/7 Priority support', 'Advanced CRM integrations', 'Custom performance reports'], popular: true },
-        { name: 'Enterprise', price: '$299', desc: 'For large enterprises with specific needs.', features: ['Dedicated account manager', 'Fully dedicated servers', '99.99% Uptime guarantee'] }
-      ]
+        {
+          name: 'Starter UI',
+          price: 'Concept',
+          desc: 'A basic journey for a small team testing the idea.',
+          features: ['Bilingual landing page', 'One dashboard view', 'Local scope planner'],
+        },
+        {
+          name: 'Workflow UI',
+          price: 'Concept',
+          desc: 'A deeper interface for teams that need workflows and reporting.',
+          features: ['Workflow states', 'Sample activity and metrics', 'Expanded component system'],
+          popular: true,
+        },
+        {
+          name: 'Platform UI',
+          price: 'Concept',
+          desc: 'Enterprise scope requiring separate discovery, security, and operations.',
+          features: ['Permission modeling', 'Integration design', 'Backend and observability plan'],
+        },
+      ],
     },
     testimonials: {
-      tag: 'Testimonials',
-      title: 'Success stories from agencies leading the market with us',
-      desc: 'Discover how Nexus-AI helped our clients double their productivity.',
+      tag: 'Review lenses',
+      title: 'How should this concept be evaluated?',
+      desc: 'Instead of invented testimonials, these are the questions to validate with real users.',
       list: [
-        { quote: 'Our workflow changed completely. We saved over 40 hours a week.', author: 'Sultan Al-Otaibi', role: 'CEO, Ofouq Agency' },
-        { quote: 'An amazing platform in every sense. Design and speed are on another level.', author: 'Sara Al-Shammari', role: 'Technical Ops Manager' },
-        { quote: 'Best investment we made for the agency this year. Exceptional performance.', author: 'Khaled Al-Omari', role: 'Founder, Smart Solutions' }
-      ]
+        {
+          title: 'Value clarity',
+          body: 'Can a visitor quickly understand that this is an automation-product concept and what still needs to be built?',
+        },
+        {
+          title: 'Trust',
+          body: 'Are dashboard data and plan concepts clearly illustrative, without suggesting live customers or operations?',
+        },
+        {
+          title: 'Usability',
+          body: 'Do language, direction, navigation, dialog, and FAQ work clearly on mobile and by keyboard?',
+        },
+      ],
     },
     faq: {
-      tag: 'FAQ',
-      title: 'Everything you need to know about the platform',
-      desc: 'Clear answers to frequently asked questions.',
+      tag: 'Straight answers',
+      title: 'What works, and what remains to build?',
+      desc: 'A direct separation between the interface demo and an operational product.',
       list: [
-        { q: 'How can I start using Nexus-AI?', a: 'You can create a free account and immediately start connecting your tools.' },
-        { q: 'Does the system require programming experience?', a: 'Not at all! Designed with a flexible drag-and-drop interface.' },
-        { q: 'Can I change my plan later?', a: 'Yes, you can upgrade or cancel your subscription at any time.' }
-      ]
+        {
+          q: 'Is Nexus-AI a working SaaS platform?',
+          a: 'No. It is an interactive frontend concept for the proposed product experience. This version has no accounts, database, or automation engine.',
+        },
+        {
+          q: 'Does the dashboard show real metrics?',
+          a: 'No. Every metric and activity is fixed sample data, clearly labeled for visual and interaction testing.',
+        },
+        {
+          q: 'Can I subscribe or pay?',
+          a: 'No. The plans are content architecture only and no checkout exists. Launch requires approved pricing, payments, terms, and policies.',
+        },
+        {
+          q: 'What is the next product step?',
+          a: 'Define the target user and automation use cases, then design data, permissions, integrations, and a backend before making commercial promises.',
+        },
+      ],
     },
-    contact: {
-      tag: 'Contact Us',
-      title: 'Get in touch with us',
-      desc: 'Have a question or want to start your project? Drop us a message and we will get back to you soon.',
-      namePlaceholder: 'Your Name',
-      emailPlaceholder: 'Email Address',
-      messagePlaceholder: 'Write your message here...',
-      submitBtn: 'Send Message'
+    planner: {
+      tag: 'Local scope planner',
+      title: 'Turn the concept into an initial scope',
+      desc: 'Choose your context and generate a summary in the browser only. No name or email is requested, and nothing is sent.',
+      team: 'Team size',
+      priority: 'First-release priority',
+      output: 'Required output',
+      submit: 'Generate scope summary',
+      reset: 'Start again',
+      resultTitle: 'Local summary ready for discussion',
+      resultDesc:
+        'A {team} focused on {priority} needs {output}. This summary stayed in your browser and no data was sent.',
+      teams: [
+        { value: 'solo', label: 'Solo or early startup' },
+        { value: 'small', label: 'Small team' },
+        { value: 'org', label: 'Company or enterprise' },
+      ],
+      priorities: [
+        { value: 'workflow', label: 'One automation workflow' },
+        { value: 'analytics', label: 'Analytics dashboard' },
+        { value: 'integrations', label: 'Tool integrations' },
+      ],
+      outputs: [
+        { value: 'prototype', label: 'Testable UX prototype' },
+        { value: 'mvp', label: 'Technical MVP plan' },
+        { value: 'system', label: 'Full system architecture' },
+      ],
     },
     footer: {
-      desc: 'The next generation of AI business automation.',
-      rights: 'All rights reserved © 2026 Nexus-AI.'
+      desc: 'A bilingual frontend concept for a future automation platform.',
+      trust: 'No accounts · No payments · No data submission',
+      rights: '© 2026 Nexus-AI UI Concept. MIT License.',
     },
-    auth: {
-      title: 'Sign in to your account',
-      subtitle: 'Enter your email to proceed to the dashboard',
-      emailLabel: 'Email Address',
-      passLabel: 'Password',
-      submit: 'Sign In',
-      close: 'Close'
+    demo: {
+      eyebrow: 'Safe local demo',
+      title: 'Open the sample dashboard',
+      subtitle: 'No email or password is needed. This is an interface preview, not a real account.',
+      bullets: [
+        'All metrics and activity are sample data.',
+        'Actions update local UI state only.',
+        'No account is created and no data is sent.',
+      ],
+      open: 'Open dashboard demo',
+      close: 'Close',
     },
     dashboard: {
-      title: 'Dashboard',
-      subtitle: 'Welcome back, here is your agency automation performance summary.',
-      logout: 'Sign Out',
-      m1: 'Tasks Completed This Month',
-      m2: 'Time Saved',
-      m3: 'Active Workflows',
-      m4: 'System Status',
-      activity: 'Recent Automation Activity',
-      quick: 'Quick Actions',
-      btn1: '+ Create New Workflow',
-      btn2: 'Connect New Tool (Integration)',
-      btn3: 'Export Reports (CSV)'
-    }
-  }
-};
+      eyebrow: 'SAMPLE DATA · LOCAL DEMO',
+      title: 'Nexus-AI Operations Dashboard',
+      subtitle: 'An interface concept for monitoring future automation workflows.',
+      back: 'Back to landing page',
+      metrics: [
+        { label: 'Sample tasks this month', value: '24' },
+        { label: 'Simulated time saved', value: '6.4h' },
+        { label: 'Demo workflows', value: '3' },
+        { label: 'Data source', value: 'LOCAL' },
+      ],
+      activity: 'Sample activity',
+      activities: [
+        { title: 'Review a new request', time: 'Step 01', status: 'Sample' },
+        { title: 'Classify demo inputs', time: 'Step 02', status: 'Sample' },
+        { title: 'Generate a fictional summary', time: 'Step 03', status: 'Sample' },
+      ],
+      quick: 'Interface interactions',
+      actions: ['Try creating a workflow', 'Try connecting a tool', 'Try exporting a report'],
+      actionResult: 'The demo state changed locally. No external action was performed.',
+    },
+  },
+}
