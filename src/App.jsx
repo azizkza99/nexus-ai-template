@@ -1,58 +1,98 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import StatsBar from './components/StatsBar';
-import Features from './components/Features';
-import Pricing from './components/Pricing';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import AuthModal from './components/AuthModal';
-import Dashboard from './components/Dashboard';
+import { useEffect, useState } from 'react'
+import DemoModal from './components/DemoModal'
+import Contact from './components/Contact'
+import Dashboard from './components/Dashboard'
+import FAQ from './components/FAQ'
+import Features from './components/Features'
+import Footer from './components/Footer'
+import Hero from './components/Hero'
+import Navbar from './components/Navbar'
+import Pricing from './components/Pricing'
+import StatsBar from './components/StatsBar'
+import Testimonials from './components/Testimonials'
+import { t } from './translations'
+
+const LANGUAGE_STORAGE_KEY = 'nexus-language:v1'
+
+function getInitialLanguage() {
+  try {
+    return window.localStorage.getItem(LANGUAGE_STORAGE_KEY) === 'en'
+      ? 'en'
+      : 'ar'
+  } catch {
+    return 'ar'
+  }
+}
 
 export default function App() {
-  const [isAuthOpen, setIsAuthOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [lang, setLang] = useState('ar'); // اللغة الافتراضية
+  const [isDemoOpen, setIsDemoOpen] = useState(false)
+  const [showDashboard, setShowDashboard] = useState(false)
+  const [lang, setLang] = useState(getInitialLanguage)
 
-  // تحديث اتجاه الصفحة تلقائياً (RTL للـ عربي / LTR للـ إنجليزي)
   useEffect(() => {
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = lang;
-  }, [lang]);
+    const copy = t[lang].meta
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'
+    document.documentElement.lang = lang
+    document.title = copy.title
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute('content', copy.description)
+    document
+      .querySelector('meta[property="og:title"]')
+      ?.setAttribute('content', copy.title)
+    document
+      .querySelector('meta[property="og:description"]')
+      ?.setAttribute('content', copy.description)
 
-  // إذا سجل المستخدم الدخول، نعرض لوحة التحكم
-  if (isLoggedIn) {
-    return <Dashboard onLogout={() => setIsLoggedIn(false)} lang={lang} />;
+    try {
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, lang)
+    } catch {
+      // Language switching still works when storage is unavailable.
+    }
+  }, [lang])
+
+  const openDashboard = () => {
+    setIsDemoOpen(false)
+    setShowDashboard(true)
   }
 
-  // واجهة الموقع (Landing Page)
-  return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-indigo-500 selection:text-white overflow-x-hidden">
-      <Navbar 
-        onOpenAuth={() => setIsAuthOpen(true)} 
-        lang={lang} 
-        onToggleLang={() => setLang(lang === 'ar' ? 'en' : 'ar')} 
+  if (showDashboard) {
+    return (
+      <Dashboard
+        onBack={() => setShowDashboard(false)}
+        lang={lang}
+        onToggleLang={() => setLang((current) => (current === 'ar' ? 'en' : 'ar'))}
       />
-      <Hero lang={lang} />
-      <StatsBar lang={lang} />
-      <Features lang={lang} />
-      <Pricing lang={lang} />
-      <Testimonials lang={lang} />
-      <FAQ lang={lang} />
-      <Contact lang={lang} />
+    )
+  }
+
+  return (
+    <div className="min-h-screen overflow-x-hidden bg-slate-950 text-slate-100 selection:bg-indigo-500 selection:text-white">
+      <a className="skip-link" href="#main-content">
+        {lang === 'ar' ? 'انتقل إلى المحتوى' : 'Skip to content'}
+      </a>
+      <Navbar
+        onOpenDemo={() => setIsDemoOpen(true)}
+        lang={lang}
+        onToggleLang={() => setLang((current) => (current === 'ar' ? 'en' : 'ar'))}
+      />
+      <main id="main-content">
+        <Hero lang={lang} onOpenDemo={() => setIsDemoOpen(true)} />
+        <StatsBar lang={lang} />
+        <Features lang={lang} />
+        <Pricing lang={lang} />
+        <Testimonials lang={lang} />
+        <FAQ lang={lang} />
+        <Contact lang={lang} />
+      </main>
       <Footer lang={lang} />
-      
-      <AuthModal 
-        isOpen={isAuthOpen} 
-        onClose={() => setIsAuthOpen(false)} 
-        onSuccess={() => {
-          setIsAuthOpen(false);
-          setIsLoggedIn(true);
-        }}
+
+      <DemoModal
+        isOpen={isDemoOpen}
+        onClose={() => setIsDemoOpen(false)}
+        onOpenDashboard={openDashboard}
         lang={lang}
       />
     </div>
-  );
+  )
 }
